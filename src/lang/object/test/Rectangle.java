@@ -1,0 +1,20 @@
+package lang.object.test;
+
+import java.util.Objects;
+
+public class Rectangle {
+    private int width;
+    private int height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return height == rectangle.height;
+    }
+}
