@@ -1,5 +1,7 @@
 package nasted.local;
 
+import java.lang.reflect.Field;
+
 public class LocalOuterV3 {
     private int outInstanceVar = 3;
 
@@ -29,5 +31,12 @@ public class LocalOuterV3 {
         Printer printer = localOuter.process(2);
         //printer.print() 를 나중에실행 process()의 스택 프레임이 사라진 이후에 실행
         printer.print();
+
+        //추가
+        System.out.println("ㅡㅡㅡㅡ필드확인 ㅡㅡㅡㅡㅡ");
+        Field[] fields = printer.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            System.out.println("field = " + field);
+        }
     }
 }
