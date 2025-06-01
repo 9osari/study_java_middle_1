@@ -22,8 +22,8 @@ public class NerworkClientV1 {
 
     public String send(String data) {
         if(sendError) {
-            System.out.println(address + "서버에 데이터 전송: " + data);
-            return  "success";
+            System.out.println(address + "서버에 데이터 전송 실패: " + data);
+            return  "sendError";
         }
         //전송 성공
         System.out.println(address + " 서버에 데이터 전송: " + data);
