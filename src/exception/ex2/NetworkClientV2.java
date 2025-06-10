@@ -22,7 +22,7 @@ public class NetworkClientV2 {
     public void send(String data) throws NerworkClientExceptionV2 {
         if(sendError) {
             //오류 코드를 리턴하는게 아닌 예외를 던짐
-            throw new NerworkClientExceptionV2("connectError",address + "서버 연결 실패");
+            throw new NerworkClientExceptionV2("sendError",address + "서버 연결 실패");
         }
         //전송 성공
         System.out.println(address + " 서버에 데이터 전송: " + data);
