@@ -1,6 +1,6 @@
 package review.lang.immutable.address;
 
-//참조형 예제
+//참조형 예제 (가변 클래스)
 public class Address {
     //주소를 보관하는 객체
     private String value;
