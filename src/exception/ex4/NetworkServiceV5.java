@@ -11,7 +11,7 @@ public class NetworkServiceV5 {
             client.initError(data);
             client.connect(); //여기서 터져도 close가 먼저 실행되어 자원적으로 이득 가독성도 좋아짐
             client.send(data);
-        } catch (Exception e) {
+        } catch (Exception e) { //catch 블럭없이 try 만있어도 close()는 호출
             System.out.println("예외 확인: " + e.getMessage());
             throw e;
         }
